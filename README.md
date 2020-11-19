@@ -1,2 +1,15 @@
-# naoned-synth
-Synthe NaonedIA
+# Projet Naoned Synth
+## NaonedIa
+Le projet Naoned Synth est porté par des adhérents de l'association [NaonedIA](http://naonedia.fr/) visant à promouvoir L'intelligence artificielle dans le grand ouest.
+
+## Descritption
+
+L'objectif est de créé un synthétiseur des bruits et sons caractéristiques de Nantes et d'y ajouter la génération de sons à partir d'une IA.
+
+## Fonctionnalités
+
+### V0.1 POC
+
+* Jouer des pistes de sons nantais et gérer le volume de chaque piste
+* Jouer des sons sur 30 secondes comme des samples
+* Lire aléatoirement un sons générés en amont par l'IA comme une des pistes
