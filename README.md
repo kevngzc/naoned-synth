@@ -1,5 +1,5 @@
 # Projet Naoned Synth
-## NaonedIa
+## NaonedIA
 Le projet Naoned Synth est porté par des adhérents de l'association [NaonedIA](http://naonedia.fr/) visant à promouvoir L'intelligence artificielle dans le grand ouest.
 
 ## Descritption
