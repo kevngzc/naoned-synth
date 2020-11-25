@@ -1,106 +1,121 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>NAONED SYNTH</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <link href="rotaryswitch/jquery.rotaryswitch.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <title>NAONED SYNTH</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <h1>NAONED SYNTH</h1>
-  <section class="container">
-    <div class="block water_sound">
-      <div class="block_header">
-        <img class="img" src="img/water.png" alt="walter" />
-      </div>
-      <div class="level_0">
-        <div class="block_row">
-          <img class="img" src="img/volume.png" alt="volume" />
-          <p>Place Royale</p>
-        </div>
-        <div class="block_row">
-          <img class="img" src="img/volume.png" alt="volume" />
-          <p>Miroir d'eau</p>
-        </div>
-        <div class="block_row">
-          <img class="img" src="img/volume.png" alt="volume" />
-          <p>Île Versailles</p>
-        </div>
-      </div>
-    </div>
-    <div class="block level_1">
-      <div class="block_header">
-        <img class="img" src="img/bicycle.png" alt="bicycle" />
-        <img class="img" src="img/tram.png" alt="tram" />
-      </div>
-      <div class="block_column">
-        <div>
-          <img class="img" src="img/volume.png" alt="volume" />
-          <p>Hotel Dieu</p>
-        </div>
-        <div>
-          <img class="img" src="img/volume.png" alt="volume" />
-          <p>Commerce</p>
-        </div>
-      </div>
-    </div>
-    <div class="block">
-      <div class="block_header">
-        <img class="img" src="img/conversation.png" alt="conversation" />
-      </div>
-      <div class="block_column">
-        <div>
-          <img class="img" src="img/volume.png" alt="volume" />
-          <p>Bouffay</p>
-        </div>
-        <div>
-          <img class="img" src="img/volume.png" alt="volume" />
-          <p>Talensac</p>
-        </div>
-      </div>
-    </div>
-    <div class="block level_1">
-      <div class="block_header">
-        <img class="img" src="img/play_button.png" alt="play" />
-        <img class="img" src="img/pause_button.png" alt="tram" />
-        <img class="img" src="img/music.png" alt="music" />
-        <img class="img" src="img/share_button.png" alt="tram" />
-      </div>
-      <div class="block_column">
-        <img class="img" src="img/tortoise.png" alt="tortoise" />
-        <div class="slidecontainer">
-          <input type="range" min="1" max="100" value="50" class="slider" id="myRange" />
-          <p>Tempo</p>
-        </div>
-        <img class="img" src="img/speed.png" alt="speed" />
-      </div>
-    </div>
-    <div>
-      <div class="block level_1">
-        <p class="block_label">Push Sounds</p>
+  <body>
+    <h1>NAONED SYNTH</h1>
+    <section class="container">
+      <div class="block water_sound">
         <div class="block_header">
-          <img class="img_small" src="img/beer.png" alt="beer" />
-          <img class="img_small" src="img/bird.png" alt="bird" />
-          <img class="img_small" src="img/football.png" alt="football" />
+          <img class="img" src="img/water.png" alt="walter" />
+        </div>
+        <div class="level_0">
+          <div class="block_row">
+            <input type="text" class="rotaryswitchPlugin" value="0" />
+            <p>Place Royale</p>
+          </div>
+          <div class="block_row">
+            <input type="text" class="rotaryswitchPlugin" value="0" />
+            <p>Miroir d'eau</p>
+          </div>
+          <div class="block_row">
+            <input type="text" class="rotaryswitchPlugin" value="0" />
+            <p>Île Versailles</p>
+          </div>
+        </div>
+      </div>
+      <div class="block level_1">
+        <div class="block_header">
+          <img class="img" src="img/bicycle.png" alt="bicycle" />
+          <img class="img" src="img/tram.png" alt="tram" />
         </div>
         <div class="block_column">
-          <img class="img_medium" src="img/stop_button.png" alt="stop" />
-          <img class="img_medium" src="img/stop_button.png" alt="stop" />
-          <img class="img_medium" src="img/stop_button.png" alt="stop" />
+          <div>
+            <input type="text" class="rotaryswitchPlugin" value="0" />
+            <p>Hotel Dieu</p>
+          </div>
+          <div>
+            <input type="text" class="rotaryswitchPlugin" value="0" />
+            <p>Commerce</p>
+          </div>
         </div>
       </div>
       <div class="block">
-        <p class="block_label">IA Generator</p>
+        <div class="block_header">
+          <img class="img" src="img/conversation.png" alt="conversation" />
+        </div>
         <div class="block_column">
-          <img class="img" src="img/on_button.png" alt="on" />
-          <img class="img" src="img/record_button.png" alt="record" />
-          <img class="img" src="img/volume.png" alt="volume" />
+          <div>
+            <input type="text" class="rotaryswitchPlugin" value="0" />
+            <p>Bouffay</p>
+          </div>
+          <div>
+            <input type="text" class="rotaryswitchPlugin" value="0" />
+            <p>Talensac</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</body>
+      <div class="block level_1">
+        <div class="block_header">
+          <button class="btn_play"></button>
+          <button class="btn_action">
+            <img class="img" src="img/share_button.png" alt="tram" />
+          </button>
+        </div>
+        <div class="block_column">
+          <img class="img" src="img/tortoise.png" alt="tortoise" />
+          <div class="slidecontainer">
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="50"
+              class="slider"
+              id="myRange"
+            />
+            <p>Tempo</p>
+          </div>
+          <img class="img" src="img/speed.png" alt="speed" />
+        </div>
+      </div>
+      <div>
+        <div class="block level_1">
+          <p class="block_label">Push Sounds</p>
+          <div class="block_header">
+            <img class="img_small" src="img/beer.png" alt="beer" />
+            <img class="img_small" src="img/bird.png" alt="bird" />
+            <img class="img_small" src="img/football.png" alt="football" />
+          </div>
+          <div class="block_column">
+            <button class="btn_action btn_stop"></button>
+            <button class="btn_action btn_stop"></button>
+            <button class="btn_action btn_stop"></button>
+          </div>
+        </div>
+        <div class="block">
+          <p class="block_label">IA Generator</p>
+          <div class="block_column">
+            <button class="btn_toggle"></button>
+            <button class="btn_action">
+              <img class="img" src="img/record_button.png" alt="record" />
+            </button>
+            <input type="text" class="rotaryswitchPlugin" value="0" />
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="rotaryswitch/jquery.rotaryswitch.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
