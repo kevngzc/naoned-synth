@@ -113,7 +113,8 @@ p {
   cursor: pointer;
 }
 
-.slider::-moz-range-thumb {
+.slider::-moz-range-thumb,
+.slider::-webkit-slider-runnable-track {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -182,10 +183,10 @@ p {
 
 .btn_stop {
   background: transparent url("img/stop_button_pushed.png") no-repeat;
-  background-size: 70px 80px;
+  background-size: 70px 70px;
   background-position: center;
   width: 70px;
-  height: 80px;
+  height: 70px;
 }
 
 .btn_stop:hover {
@@ -195,10 +196,10 @@ p {
 .btn_stop.pushed {
   transform: scale(0.95);
   background: transparent url("img/stop_button.png") no-repeat;
-  background-size: 70px 80px;
+  background-size: 70px 70px;
   background-position: center;
   width: 70px;
-  height: 80px;
+  height: 70px;
 }
 
 /*Responsive */
