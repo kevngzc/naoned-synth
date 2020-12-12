@@ -25,9 +25,6 @@ $(function () {
 
   // Toggle button and play button
   $(document).ready(function () {
-    $(".btn_play").click(function () {
-      $(this).toggleClass("pause");
-    });
     $(".btn_toggle").click(function () {
       $(this).toggleClass("on");
     });
@@ -38,5 +35,4 @@ $(function () {
       $(this).removeClass("pushed");
     });
   });
-  // Button play/pause
 });

@@ -64,27 +64,25 @@
           </div>
         </div>
       </div>
-      <div class="block level_1">
-        <div class="block_header">
-          <button class="btn_play"></button>
-          <button class="btn_action">
-            <img class="img" src="img/share_button.png" alt="tram" />
-          </button>
-        </div>
-        <div class="block_column">
-          <img class="img" src="img/tortoise.png" alt="tortoise" />
-          <div class="slidecontainer">
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="50"
-              class="slider"
-              id="myRange"
-            />
-            <p>Tempo</p>
+      <div>
+        <div class="block level_1">
+          <div class="block_column">
+            <button class="btn_play"></button>
+            <button class="btn_pause"></button>
+            <button class="btn_action">
+              <img class="img" src="img/share_button.png" alt="tram" />
+            </button>
           </div>
-          <img class="img" src="img/speed.png" alt="speed" />
+        </div>
+        <div class="block">
+          <p class="block_label">IA Generator</p>
+          <div class="block_column">
+            <button class="btn_toggle"></button>
+            <button class="btn_action">
+              <img class="img" src="img/record_button.png" alt="record" />
+            </button>
+            <input type="text" class="rotaryswitchPlugin" value="0" />
+          </div>
         </div>
       </div>
       <div>
@@ -101,14 +99,22 @@
             <button class="btn_action btn_stop"></button>
           </div>
         </div>
+
         <div class="block">
-          <p class="block_label">IA Generator</p>
+          <p class="block_label">Fréquence</p>
           <div class="block_column">
-            <button class="btn_toggle"></button>
-            <button class="btn_action">
-              <img class="img" src="img/record_button.png" alt="record" />
-            </button>
-            <input type="text" class="rotaryswitchPlugin" value="0" />
+            <img class="img" src="img/tortoise.png" alt="tortoise" />
+            <div class="slidecontainer">
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="50"
+                class="slider"
+                id="myRange"
+              />
+            </div>
+            <img class="img" src="img/speed.png" alt="speed" />
           </div>
         </div>
       </div>
