@@ -1,127 +1,327 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>NAONED SYNTH</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap"
-      rel="stylesheet"
-    />
-    <link href="rotaryswitch/jquery.rotaryswitch.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <head>
+        <title>NAONED SYNTH</title>
+        <link href="https://fonts.gstatic.com" rel="preconnect"/>
+        <link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <link href="assets/build/style.css" rel="stylesheet"/>
+    </head>
 
-  <body>
-    <h1>NAONED SYNTH</h1>
-    <section class="container">
-      <div class="block water_sound">
-        <div class="block_header">
-          <img class="img" src="img/water.png" alt="walter" />
-        </div>
-        <div class="level_0">
-          <div class="block_row">
-            <input type="text" class="rotaryswitchPlugin" value="0" />
-            <p>Place Royale</p>
-          </div>
-          <div class="block_row">
-            <input type="text" class="rotaryswitchPlugin" value="0" />
-            <p>Miroir d'eau</p>
-          </div>
-          <div class="block_row">
-            <input type="text" class="rotaryswitchPlugin" value="0" />
-            <p>Île Versailles</p>
-          </div>
-        </div>
-      </div>
-      <div class="block level_1">
-        <div class="block_header">
-          <img class="img" src="img/bicycle.png" alt="bicycle" />
-          <img class="img" src="img/tram.png" alt="tram" />
-        </div>
-        <div class="block_column">
-          <div>
-            <input type="text" class="rotaryswitchPlugin" value="0" />
-            <p>Hotel Dieu</p>
-          </div>
-          <div>
-            <input type="text" class="rotaryswitchPlugin" value="0" />
-            <p>Commerce</p>
-          </div>
-        </div>
-      </div>
-      <div class="block">
-        <div class="block_header">
-          <img class="img" src="img/conversation.png" alt="conversation" />
-        </div>
-        <div class="block_column">
-          <div>
-            <input type="text" class="rotaryswitchPlugin" value="0" />
-            <p>Bouffay</p>
-          </div>
-          <div>
-            <input type="text" class="rotaryswitchPlugin" value="0" />
-            <p>Talensac</p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="block level_1">
-          <div class="block_column">
-            <button class="btn_play"></button>
-            <button class="btn_pause"></button>
-            <button class="btn_action">
-              <img class="img" src="img/share_button.png" alt="tram" />
-            </button>
-          </div>
-        </div>
-        <div class="block">
-          <p class="block_label">IA Generator</p>
-          <div class="block_column">
-            <button class="btn_toggle"></button>
-            <button class="btn_action">
-              <img class="img" src="img/record_button.png" alt="record" />
-            </button>
-            <input type="text" class="rotaryswitchPlugin" value="0" />
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="block level_1">
-          <p class="block_label">Push Sounds</p>
-          <div class="block_header">
-            <img class="img_small" src="img/beer.png" alt="beer" />
-            <img class="img_small" src="img/bird.png" alt="bird" />
-            <img class="img_small" src="img/football.png" alt="football" />
-          </div>
-          <div class="block_column">
-            <button class="btn_action btn_stop"></button>
-            <button class="btn_action btn_stop"></button>
-            <button class="btn_action btn_stop"></button>
-          </div>
-        </div>
-
-        <div class="block">
-          <p class="block_label">Frequency</p>
-          <div class="block_column">
-            <img class="img" src="img/tortoise.png" alt="tortoise" />
-            <div class="slidecontainer">
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="50"
-                class="slider"
-                id="myRange"
-              />
+    <body>
+        <h1 class="header-title">NAONED SYNTH</h1>
+        <button id="btn-help"
+                class="absolute top-5 lg:top-10 right-5 lg:right-10 text-white bg-black border-none hover:bg-gray-300 h-8 lg:h-12 w-8 lg:w-12 rounded-full font-bold text-2xl">
+            ?
+        </button>
+        <section class="container mx-auto flex flex-wrap items-stretch justify-center lg:justify-between flex-row">
+            <div class="w-full lg:w-3/6 xl:w-1/6 order-2 xl:order-1 mb-5">
+                <div class="flex flex-row block p-2 lg:p-5 mx-5 h-full">
+                    <div class="mb-5 self-center">
+                        <img alt="walter" class="img" src="assets/img/water.png"/>
+                    </div>
+                    <div class="flex-grow flex flex-row lg:flex-col justify-around">
+                        <div class="flex flex-col items-center">
+                            <input class="rotaryswitch-component"
+                                   data-sound-key="royal_place"
+                                   type="number"
+                                   value="-20"/>
+                            <p>Place Royale</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <input class="rotaryswitch-component"
+                                   data-sound-key="water_mirror"
+                                   type="number"
+                                   value="-20"/>
+                            <p>Miroir d'eau</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <input class="rotaryswitch-component"
+                                   data-sound-key="versailles_island"
+                                   type="number"
+                                   value="-20"/>
+                            <p>Île Versailles</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <img class="img" src="img/speed.png" alt="speed" />
-          </div>
-        </div>
-      </div>
-    </section>
+            <div class="w-full lg:w-3/6 xl:w-2/6 order-3 xl:order-2 mb-5">
+                <div class="mx-5 h-full flex flex-col items-stretch">
+                    <div class="flex-grow flex block p-5 mb-5">
+                        <div class="flex justify-around mb-5">
+                            <img alt="bicycle" class="img" src="assets/img/bicycle.png"/>
+                            <img alt="tram" class="img" src="assets/img/tram.png"/>
+                        </div>
+                        <div class="flex justify-around">
+                            <div>
+                                <input class="rotaryswitch-component"
+                                       data-sound-key="hotel_dieu"
+                                       type="number"
+                                       value="-20"/>
+                                <p>Hotel Dieu</p>
+                            </div>
+                            <div>
+                                <input class="rotaryswitch-component"
+                                       data-sound-key="commerce"
+                                       type="number"
+                                       value="-20"/>
+                                <p>Commerce</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-grow flex block p-5 p-5">
+                        <div class="flex justify-around mb-5">
+                            <img alt="conversation" class="img" src="assets/img/conversation.png"/>
+                        </div>
+                        <div class="flex justify-around">
+                            <div>
+                                <input class="rotaryswitch-component"
+                                       data-sound-key="bouffay"
+                                       type="number"
+                                       value="-20"/>
+                                <p>Bouffay</p>
+                            </div>
+                            <div>
+                                <input class="rotaryswitch-component"
+                                       data-sound-key="talensac"
+                                       type="number"
+                                       value="-20"/>
+                                <p>Talensac</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full xl:w-3/6 order-1 xl:order-3 mb-5">
+                <div class="mx-5 flex flex-col justify-between h-full">
+                    <div class="flex block p-5 mb-5">
+                        <div class="flex justify-around">
+                            <button class="btn btn--pause"></button>
+                            <button class="btn btn--stop"></button>
+                            <button class="btn" id="btn-share">
+                                <img alt="partager" class="img" src="assets/img/share_button.png"/>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex block p-5 pt-16 lg:pt-5 mb-5">
+                        <p class="block-title">IA Generator</p>
+                        <div class="flex justify-around">
+                            <button class="btn btn--toggle" id="ai-locker"></button>
+                            <button class="btn btn--record" id="ai-play-button"></button>
+                            <input class="rotaryswitch-component"
+                                   data-sound-key="ai"
+                                   id="ai-volume"
+                                   type="number"
+                                   value="-20"/>
+                        </div>
+                    </div>
+                    <div class="flex block p-5 pt-16 lg:pt-5 mb-5">
+                        <p class="block-title">Push Sounds</p>
+                        <div class="flex justify-around mb-5">
+                            <img alt="beer" class="img-small" src="assets/img/beer.png"/>
+                            <img alt="bird" class="img-small" src="assets/img/bird.png"/>
+                            <img alt="football" class="img-small" src="assets/img/football.png"/>
+                        </div>
+                        <div class="flex justify-around">
+                            <button class="btn btn-push-sound" data-sound-key="bar"></button>
+                            <button class="btn btn-push-sound" data-sound-key="birds"></button>
+                            <button class="btn btn-push-sound" data-sound-key="sport"></button>
+                        </div>
+                    </div>
+                    <div class="flex block p-5">
+                        <p class="block-title">Frequency</p>
+                        <div class="flex justify-around pt-16 lg:pt-0">
+                            <img alt="tortoise"
+                                 class="img absolute lg:relative left-5 lg:left-0 top-5 lg:top-0"
+                                 src="assets/img/tortoise.png"/>
+                            <div class="slider-container w-full lg:w-1/2">
+                                <input
+                                    class="slider"
+                                    id="myRange"
+                                    max="20"
+                                    min="0"
+                                    step="1"
+                                    type="range"
+                                    value="10"
+                                />
+                            </div>
+                            <img alt="speed"
+                                 class="img absolute lg:relative right-5 lg:right-0 top-5 lg:top-0"
+                                 src="assets/img/speed.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="rotaryswitch/jquery.rotaryswitch.js"></script>
-    <script src="app.js"></script>
-  </body>
+        <div id="help-modal" class="hidden modal fixed w-screen h-screen top-0 left-0 items-center justify-center">
+            <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+
+            <div class="relative modal-container bg-white w-11/12 lg:max-w-2xl mx-auto rounded shadow-lg z-50 overflow-y-auto p-3">
+                <div class="text-center text-2xl px-6 mb-5">Aide sur l'utilisation</div>
+                <button id="btn-modal-helper-close"
+                        class="absolute top-1 right-1 text-white bg-black border hover:bg-gray-300 h-7 w-7 rounded-full font-bold text-lg">
+                    X
+                </button>
+                <div>
+                    <ul>
+                        <li class="py-3 border-b">
+                            <img src="assets/img/power_button.png"
+                                 alt="icone power"
+                                 width="512"
+                                 height="512"
+                                 class="inline mr-3 w-7 h-7"/>
+                            Arrête tout les sons et reset des paramètres
+                        </li>
+                        <li class="py-3 border-b">
+                            <img src="assets/img/play_button.png"
+                                 alt="icone play"
+                                 width="512"
+                                 height="512"
+                                 class="inline mr-3 w-7 h-7"/>
+                            <img src="assets/img/pause_button.png"
+                                 alt="icone pause"
+                                 width="512"
+                                 height="512"
+                                 class="inline mr-3 w-7 h-7"/>
+                            Lance ou Arrête tout les sons continu (excepté les push), conserve les paramètres
+                        </li>
+                        <li class="py-3 border-b">
+                            <img src="assets/img/stop_button.png"
+                                 alt="icone push"
+                                 width="512"
+                                 height="512"
+                                 class="inline mr-3 w-7 h-7"/>
+                            Lance un son en lecture unique
+                        </li>
+                        <li class="py-3 border-b">
+                            <img src="assets/img/volume.png"
+                                 alt="icone volume"
+                                 width="373"
+                                 height="368"
+                                 class="inline mr-3 w-7 h-7"/>
+                            Régler le volume du son continu ou son de l'IA
+                        </li>
+                        <li class="py-3 border-b">
+                            <img src="assets/img/tortoise.png"
+                                 alt="icone tortue"
+                                 width="512"
+                                 height="512"
+                                 class="inline mr-3 w-7 h-7"/>
+                            <div class="inline-block w-10 h-1 bg-gray-300"></div>
+                            <img src="assets/img/speed.png"
+                                 alt="icone rapide"
+                                 width="512"
+                                 height="512"
+                                 class="inline mr-3 w-7 h-7"/>
+                            Régler la vitesse des sons (hors son IA)
+                        </li>
+                        <li class="py-3">
+                            <div class="bg-gray-200 text-xl font-bold inline-block p-2 mr-3 mb-1">Sons IA</div>
+                            Débloquer avec
+                            <img src="assets/img/toggle_off.png"
+                                 alt="icone switch"
+                                 width="512"
+                                 height="262"
+                                 class="inline mr-3 w-7 h-auto"/>
+                            puis lancer le son avec
+                            <img src="assets/img/record_button.png"
+                                 alt="icone play sons IA"
+                                 width="512"
+                                 height="512"
+                                 class="inline mr-3 w-7 h-7"/>
+                        </li>
+                    </ul>
+                    <div class="flex pt-3">
+                        <div class="w-1/2 text-center">
+                            <p class="text-sm">
+                                Projet propulsé par l'association
+                                <a alt="Logo Naonedia"
+                                   class="text-blue-500 underline hover:text-blue-800"
+                                   href="http://naonedia.fr/" target="_blank">
+                                    NAONEDIA
+                                </a>
+                            </p>
+                            <img class="mx-auto" src="/assets/img/logo-naonedia.png"/>
+                        </div>
+                        <div class="w-1/2 text-center">
+                            <p class="text-sm">
+                                Hébergé par la radio le
+                                <a class="text-blue-500 underline hover:text-blue-800"
+                                   href="https://www.lesonunique.com/"
+                                   target="_blank">
+                                    SUN, le Son Unique
+                                </a>
+                            </p>
+                            <img alt="Logo SUN" class="mx-auto" src="/assets/img/logo-sun.png"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hidden modal fixed w-screen h-screen top-0 left-0 items-center justify-center" id="share-modal">
+            <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50"></div>
+            <div class="relative modal-container bg-white w-11/12 lg:max-w-2xl mx-auto rounded shadow-lg z-50 overflow-y-auto p-3">
+                <div class="text-center text-2xl px-6 mb-5">Partager sur</div>
+                <button class="absolute top-1 right-1 text-white bg-black border hover:bg-gray-300 h-7 w-7 rounded-full font-bold text-lg"
+                        id="btn-modal-share-close">
+                    X
+                </button>
+                <div class="flex justify-around py-10">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://naoned-synth.surge.sh/"
+                       id="share-btn-facebook"
+                       target="_blank">
+                        <?xml version="1.0" encoding="iso-8859-1"?>
+                        <svg height="50pt"
+                             id="Capa_1" style="enable-background:new 0 0 167.657 167.657;"
+                             version="1.1"
+                             viewBox="0 0 167.657 167.657"
+                             width="50pt"
+                             x="0px"
+                             xml:space="preserve"
+                             xmlns="http://www.w3.org/2000/svg"
+                             y="0px"><g><path d="M83.829,0.349C37.532,0.349,0,37.881,0,84.178c0,41.523,30.222,75.911,69.848,82.57v-65.081H49.626
+		v-23.42h20.222V60.978c0-20.037,12.238-30.956,30.115-30.956c8.562,0,15.92,0.638,18.056,0.919v20.944l-12.399,0.006
+		c-9.72,0-11.594,4.618-11.594,11.397v14.947h23.193l-3.025,23.42H94.026v65.653c41.476-5.048,73.631-40.312,73.631-83.154
+		C167.657,37.881,130.125,0.349,83.829,0.349z"/></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g>
+                            <g></g></svg>
+                    </a>
+
+                    <a href="https://twitter.com/intent/tweet?url=https://naoned-synth.surge.sh/"
+                       id="share-btn-twitter"
+                       target="_blank">
+                        <svg height="50pt" viewBox="0 0 512 512" width="50pt" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm116.886719 199.601562c.113281 2.519532.167969 5.050782.167969 7.59375 0 77.644532-59.101563 167.179688-167.183594 167.183594h.003906-.003906c-33.183594 0-64.0625-9.726562-90.066406-26.394531 4.597656.542969 9.277343.8125 14.015624.8125 27.53125 0 52.867188-9.390625 72.980469-25.152344-25.722656-.476562-47.410156-17.464843-54.894531-40.8125 3.582031.6875 7.265625 1.0625 11.042969 1.0625 5.363281 0 10.558593-.722656 15.496093-2.070312-26.886718-5.382813-47.140624-29.144531-47.140624-57.597657 0-.265624 0-.503906.007812-.75 7.917969 4.402344 16.972656 7.050782 26.613281 7.347657-15.777343-10.527344-26.148437-28.523438-26.148437-48.910157 0-10.765624 2.910156-20.851562 7.957031-29.535156 28.976563 35.554688 72.28125 58.9375 121.117187 61.394532-1.007812-4.304688-1.527343-8.789063-1.527343-13.398438 0-32.4375 26.316406-58.753906 58.765625-58.753906 16.902344 0 32.167968 7.144531 42.890625 18.566406 13.386719-2.640625 25.957031-7.53125 37.3125-14.261719-4.394531 13.714844-13.707031 25.222657-25.839844 32.5 11.886719-1.421875 23.214844-4.574219 33.742187-9.253906-7.863281 11.785156-17.835937 22.136719-29.308593 30.429687zm0 0"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://naoned-synth.surge.sh/&title=&summary=&source="
+                       id="share-btn-linkedin"
+                       target="_blank">
+                        <svg height="50pt" viewBox="0 0 512 512" width="50pt" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m256 0c-141.363281 0-256 114.636719-256 256s114.636719 256 256 256 256-114.636719 256-256-114.636719-256-256-256zm-74.390625 387h-62.347656v-187.574219h62.347656zm-31.171875-213.1875h-.40625c-20.921875 0-34.453125-14.402344-34.453125-32.402344 0-18.40625 13.945313-32.410156 35.273437-32.410156 21.328126 0 34.453126 14.003906 34.859376 32.410156 0 18-13.53125 32.402344-35.273438 32.402344zm255.984375 213.1875h-62.339844v-100.347656c0-25.21875-9.027343-42.417969-31.585937-42.417969-17.222656 0-27.480469 11.601563-31.988282 22.800781-1.648437 4.007813-2.050781 9.609375-2.050781 15.214844v104.75h-62.34375s.816407-169.976562 0-187.574219h62.34375v26.558594c8.285157-12.78125 23.109375-30.960937 56.1875-30.960937 41.019531 0 71.777344 26.808593 71.777344 84.421874zm0 0"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/build/index.js"></script>
+    </body>
 </html>

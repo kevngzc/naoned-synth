@@ -1,0 +1,27 @@
+{
+  "name": "naoned-synth",
+  "version": "1.0.0",
+  "repository": "https://github.com/kevngzc/naoned-synth.git",
+  "author": "Cyril B. <cyril@acid.fr>",
+  "scripts": {
+    "dev": "yarn run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "yarn run development --watch",
+    "prod": "yarn run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tonejs/midi": "^2.0.25",
+    "fs": "^0.0.1-security",
+    "jquery": "^3.5.1",
+    "laravel-mix": "^6.0.9",
+    "midiconvert": "baweaver/MidiConvert",
+    "postcss": "^8.1",
+    "resolve-url-loader": "3.1.0",
+    "sass": "^1.32.4",
+    "sass-loader": "8.*",
+    "tailwindcss": "^2.0.2",
+    "tone": "^14.7.77"
+  }
+}

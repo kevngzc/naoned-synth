@@ -1,0 +1,212 @@
+@import "../vendor/rotaryswitch/jquery.rotaryswitch.css";
+@import "~tailwindcss";
+
+/* CSS Global */
+html {
+    max-width: 100%;
+}
+
+body {
+    position: relative;
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+    ), url("/assets/img/bgnaonedsynth-min.png") repeat fixed;
+    min-height: 100vh;
+    max-width: 100vw;
+    margin: 0;
+    font-family: "Kelly Slab", cursive !important;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(#333, 80%);
+        z-index: -1;
+    }
+}
+
+.header-title {
+    text-align: center;
+    font-size: 54px;
+    background: linear-gradient(rgba(#fff, 80%), rgba(#fff, 0%));
+    margin: 0;
+    padding: 40px;
+    text-shadow: 1px 1px 1px #333;
+}
+
+p {
+    text-align: center;
+}
+
+button {
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.img {
+    width: 70px;
+    height: 70px;
+}
+
+.img-small {
+    width: 40px;
+    height: 40px;
+}
+
+/* Block and container */
+.container {
+    max-width: 100%;
+    min-height: 600px;
+
+    .block {
+        position: relative;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 10px;
+        background-color: white;
+        border: 2px solid #7a7a7a;
+    }
+
+    .block-title {
+        color: #929292;
+        position: absolute;
+        top: 1rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+        height: 0;
+        overflow-x: visible;
+
+        @media (min-width: 1024px) {
+            top: 50%;
+            left: -15px;
+            right: unset;
+            text-align: left;
+            transform: rotate(270deg);
+        }
+    }
+
+    /* Slide progress Tempo */
+    .slider-container {
+        padding-top: 30px;
+
+        .slider {
+            -webkit-appearance: none;
+            outline: none;
+            width: 100%;
+            background: #c6c5cb;
+            height: 8px;
+            border-radius: 5px;
+
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid #3e3d43;
+                cursor: pointer;
+            }
+
+            &::-moz-range-thumb,
+            &::-webkit-slider-runnable-track {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #fe0b37;
+                border: 5px solid #020202;
+                cursor: pointer;
+            }
+        }
+    }
+
+    /* Rotaryswitch*/
+
+    .rotaryswitchPlugin {
+        height: 70px;
+        width: 70px;
+
+        .switch {
+            height: 70px;
+            width: 70px;
+            background-size: 70px 70px;
+        }
+    }
+
+    /* Animation*/
+
+    .btn {
+        transition: transform 500ms;
+        appearance: none;
+        border: none;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-position: center;
+        outline: none;
+        background-size: 70px 70px;
+        width: 70px;
+        height: 70px;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &--play {
+            background-image: url("/assets/img/play_button.png");
+        }
+
+        &--pause {
+            background-image: url("/assets/img/pause_button.png");
+        }
+
+        &--stop {
+            background-image: url("/assets/img/power_button.png");
+        }
+
+        &--record {
+            background-image: url("/assets/img/record_button.png");
+        }
+
+        &--toggle {
+            background-image: url("/assets/img/toggle_off.png");
+            height: auto;
+            width: 70px;
+            background-size: 70px auto;
+
+            &.on {
+                background-image: url("/assets/img/toggle_on.png");
+            }
+        }
+
+        &-push-sound {
+            background-image: url("/assets/img/stop_button_pushed.png");
+
+            &.pushed {
+                background-image: url("/assets/img/stop_button.png");
+            }
+        }
+    }
+}
+
+#share-btn-facebook:hover > svg {
+    fill: #3b5999;
+}
+
+#share-btn-twitter:hover > svg {
+    fill: #55acee;
+}
+
+#share-btn-linkedin:hover > svg {
+    fill: #0077b5;
+}

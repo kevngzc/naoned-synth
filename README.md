@@ -20,6 +20,21 @@ L'application web sera responsive pour être utilisée depuis un mobile égaleme
 
 ### Liens utiles
 
-- :control_knobs: [Interface et visuels pour Démonstration](https://naoned-synth.surge.sh/)
-- :framed_picture: [Maquettes](https://app.moqups.com/4hpFiZNNCP/view/page/ac41ad94d?ui=0)
+- 🎛️ [Interface et visuels pour Démonstration](https://naoned-synth.surge.sh/)
+- 🖼️ [Maquettes](https://app.moqups.com/4hpFiZNNCP/view/page/ac41ad94d?ui=0)
 - Pour implémenter la lecture des pistes, le volume et le tempo possibilité d'utiliser [ToneJS](https://tonejs.github.io/)
+
+### developpement
+
+#### Technologie
+
+- [yarn](https://yarnpkg.com/)
+
+### Installation
+
+- `yarn install`
+
+### Usage
+
+- Compiler si changement dans les fichiers de `resources/` => `yarn run dev`
+- Compiler avant commit `yarn run production`
